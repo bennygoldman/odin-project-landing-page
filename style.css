@@ -1,87 +1,130 @@
-html,
+/* global resets */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
-header,
-.hero,
+/* flexboxes */
+
+.one,
+.two,
+.three,
+.four,
+.navbar,
+.main,
+.random,
+.random .gallery,
+.random .gallery .item,
+.quote,
+.banner,
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.one,
+.random,
+.quote,
+.random .gallery .item {
+    flex-direction: column;
+}
+
+/* background styles */
+.one,
 footer {
     background-color: #1F2937;
 }
 
-h1 {
+.three {
+    background-color: #e5e7eb;
+}
+
+.banner {
+    background-color: #3882f6;
+}
+
+
+
+/* font styles */
+.hero h1 {
     font-size: 48px;
     font-weight: bolder;
-    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #f9faf8;
 }
 
-header .logo {
+.hero .header .logo,
+.banner .bold {
     font-size: 24px;
     color: #f9faf8;
 }
 
-header .link {
+.hero .link,
+.hero p,
+.banner p,
+footer p {
     font-size: 18px;
     color: #e5e7eb;
 }
 
-.hero .button,
-.section.banner {
-    background-color: #3882f6;
-}
-
 h2,
-.section.quote .copy {
+.quote .copy {
     font-size: 36px;
     color: #1f2937;
 
 }
+
 
 h2 {
     font-weight: bolder;
 
 }
 
-.section.quote {
-    background-color: #e5e7eb;
-}
-
-.section.quote .copy {
+.quote .copy {
     font-weight: 100;
     font-style: italic;
 
 }
 
-ul {
-    display: flex;
-    gap: 16px;
+.quote .author {
+    font-weight: bold;
 }
 
-ul .logo {
-    margin-right: auto;
-
+.navbar {
+    list-style: none;
 }
 
-li {
-    flex: 1 1 auto;
+button {
+    color: #f9faf8;
+    border-radius: 4px;
+    background-color: #3882f6;
+    padding: 4px 16px;
 }
 
-section.one.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
+.hero button {
+    border: none;
 }
 
-section.one.hero left {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+.banner button {
+    outline: none;
+    border: 1px solid #f9faf8;
 }
 
-section.one.hero .right.box {
-    background-color: #e5e7eb;
+.main .right .box {
+    background-color: #6C747D;
+}
 
+.gallery .item .box {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #3882f6;
+    border-radius: 16px;
+}
+
+.random .gallery .item p {
+    color: #6C747D;
 }
