@@ -1,43 +1,90 @@
 /* global resets */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* margin and padding */
 
-/* flexboxes */
-
+nav,
 .one,
 .two,
+.gallery,
 .three,
 .four,
-.navbar,
-.main,
-.random,
-.random .gallery,
-.random .gallery .item,
-.quote,
 .banner,
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+    margin: 0 auto;
+    padding: 16px;
 }
 
+
+ul .logo {
+    margin-right: auto;
+}
+
+/* flexboxes */
+nav ul,
 .one,
-.random,
-.quote,
-.random .gallery .item {
+.one .box,
+.two,
+.two .gallery,
+.item,
+.three,
+.four,
+.banner,
+.banner .box,
+footer {
+    display: flex;
+    gap: 16px;
+}
+
+.one .box,
+.two,
+.gallery .item,
+.three,
+.banner .box,
+footer {
     flex-direction: column;
 }
 
+.one .box {
+    flex: 1 1 0;
+}
+
+.one .right.box,
+.two,
+.item,
+.banner .box.button,
+footer {
+    justify-content: center;
+    align-items: center;
+}
+
+.one button {
+    align-self: flex-start;
+}
+
+.three .author {
+    align-self: flex-end;
+}
+
 /* background styles */
+nav,
 .one,
 footer {
     background-color: #1F2937;
+}
+
+.one .right.box {
+    background-color: #6C747D;
+}
+
+.two,
+.four {
+    background-color: #fff;
 }
 
 .three {
@@ -51,20 +98,20 @@ footer {
 
 
 /* font styles */
-.hero h1 {
+.one h1 {
     font-size: 48px;
     font-weight: bolder;
     color: #f9faf8;
 }
 
-.hero .header .logo,
+nav .logo,
 .banner .bold {
     font-size: 24px;
     color: #f9faf8;
 }
 
-.hero .link,
-.hero p,
+nav .link,
+.one p,
 .banner p,
 footer p {
     font-size: 18px;
@@ -72,30 +119,34 @@ footer p {
 }
 
 h2,
-.quote .copy {
+.three .quote {
     font-size: 36px;
     color: #1f2937;
-
 }
 
 
 h2 {
     font-weight: bolder;
-
 }
 
-.quote .copy {
+.three .quote {
     font-weight: 100;
     font-style: italic;
 
 }
 
-.quote .author {
+.three .author {
     font-weight: bold;
 }
 
-.navbar {
+ul {
     list-style: none;
+    align-items: baseline;
+}
+
+ul a {
+    color: inherit;
+    text-decoration: none;
 }
 
 button {
@@ -105,7 +156,7 @@ button {
     padding: 4px 16px;
 }
 
-.hero button {
+.one button {
     border: none;
 }
 
@@ -114,9 +165,7 @@ button {
     border: 1px solid #f9faf8;
 }
 
-.main .right .box {
-    background-color: #6C747D;
-}
+
 
 .gallery .item .box {
     width: 100px;
@@ -125,6 +174,6 @@ button {
     border-radius: 16px;
 }
 
-.random .gallery .item p {
+.gallery .item p {
     color: #6C747D;
 }
