@@ -1,179 +1,236 @@
-/* global resets */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
+
 * {
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
 }
 
-/* margin and padding */
-
-nav,
-.one,
-.two,
-.gallery,
-.three,
-.four,
-.banner,
-footer {
-    margin: 0 auto;
-    padding: 16px;
-}
-
-
-ul .logo {
-    margin-right: auto;
-}
-
-/* flexboxes */
-nav ul,
-.one,
-.one .box,
-.two,
-.two .gallery,
-.item,
-.three,
-.four,
-.banner,
-.banner .box,
-footer {
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    height: 100vh;
     display: flex;
-    gap: 16px;
-}
-
-.one .box,
-.two,
-.gallery .item,
-.three,
-.banner .box,
-footer {
     flex-direction: column;
 }
 
-.one .box {
-    flex: 1 1 0;
-}
-
-.one .right.box,
-.two,
-.item,
-.banner .box.button,
-footer {
-    justify-content: center;
-    align-items: center;
-}
-
-.one button {
-    align-self: flex-start;
-}
-
-.three .author {
-    align-self: flex-end;
-}
-
-/* background styles */
-nav,
-.one,
-footer {
+nav {
+    padding: 16px 32px;
     background-color: #1F2937;
 }
 
-.one .right.box {
-    background-color: #6C747D;
+nav ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    max-width: 1024px;
+    align-items: center;
 }
 
-.two,
-.four {
-    background-color: #fff;
+nav ul .logo {
+    margin-right: auto;
 }
 
-.three {
-    background-color: #e5e7eb;
-}
-
-.banner {
-    background-color: #3882f6;
-}
-
-
-
-/* font styles */
-.one h1 {
-    font-size: 48px;
-    font-weight: bolder;
-    color: #f9faf8;
-}
-
-nav .logo,
-.banner .bold {
+nav ul .logo a {
+    text-decoration: none;
     font-size: 24px;
     color: #f9faf8;
+    font-weight: 700;
 }
 
-nav .link,
-.one p,
-.banner p,
-footer p {
+nav ul .link {
+    padding: 0 16px;
+}
+
+nav ul .link a {
+    text-decoration: none;
     font-size: 18px;
     color: #e5e7eb;
 }
 
-h2,
-.three .quote {
-    font-size: 36px;
-    color: #1f2937;
+.content {
+    flex: 1;
 }
 
+.one {
+    padding: 64px 32px;
+    background-color: #1F2937;
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    margin: 0 auto;
 
-h2 {
-    font-weight: bolder;
+
 }
 
-.three .quote {
-    font-weight: 100;
-    font-style: italic;
-
+.one .box {
+    max-width: 496px;
 }
 
-.three .author {
-    font-weight: bold;
-}
-
-ul {
-    list-style: none;
-    align-items: baseline;
-}
-
-ul a {
-    color: inherit;
-    text-decoration: none;
-}
-
-button {
+.one h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+    font-weight: 900;
     color: #f9faf8;
-    border-radius: 4px;
-    background-color: #3882f6;
-    padding: 4px 16px;
+}
+
+.one p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: #e5e7eb;
 }
 
 .one button {
+    margin: 0;
     border: none;
+    padding: 8px 24px;
+    border-radius: 8px;
+    background-color: #3882f6;
+    color: #f9faf8;
+    font-weight: 700;
 }
 
-.banner button {
-    outline: none;
-    border: 1px solid #f9faf8;
+.one .left * {
+    margin-bottom: 16px;
 }
 
+.one .left {
+    flex: 2;
+}
 
+.one .right {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6C747D;
+}
 
-.gallery .item .box {
-    width: 100px;
-    height: 100px;
+.two {
+    background-color: #fff;
+    padding-top: 36px;
+    padding-bottom: 72px;
+}
+
+.two h2 {
+    margin-bottom: 36px;
+    text-align: center;
+    font-size: 36px;
+    color: #1f2937;
+    font-weight: 900;
+}
+
+.two .gallery {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 42px;
+}
+
+.two .gallery .item {
+    width: 150px;
+}
+
+.two .gallery .item .box {
+    width: 150px;
+    height: 150px;
     border: 2px solid #3882f6;
     border-radius: 16px;
+    margin-bottom: 16px;
 }
 
-.gallery .item p {
+.two .gallery .item p {
+    text-align: center;
     color: #6C747D;
+}
+
+.three {
+    background-color: #e5e7eb;
+    padding: 72px 0;
+}
+
+.three .thorquote {
+    display: flex;
+    flex-direction: column;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.three .thorquote .quote {
+    font-size: 36px;
+    color: #1f2937;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.three .thorquote .author {
+    font-weight: 700;
+    align-self: flex-end;
+}
+
+.four {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 72px 0;
+}
+
+.four .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #3882f6;
+    padding: 24px 72px;
+}
+
+.four button {
+    color: #f9faf8;
+    border-radius: 4px;
+    background-color: #3882f6;
+    padding: 8px 24px;
+    outline: none;
+    border: 2px solid #f9faf8;
+    font-weight: 700;
+}
+
+.four .banner .box {
+    margin: 16px 48px;
+}
+
+.four .banner .box.text {
+    flex: 2;
+}
+
+.four .banner .box.text p {
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+.four .banner .box.text .bold {
+    font-size: 24px;
+    color: #f9faf8;
+    font-weight: 700;
+}
+
+.four .banner .box.button {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer {
+    padding: 32px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F2937;
+    font-size: 18px;
+    color: #e5e7eb;
 }
